@@ -1,4 +1,4 @@
-const apiUrl = 'http://127.0.0.1:5000/api/projects'
+const apiUrl = 'https://python-portfolio-api.onrender.com'
 
 async function fetchAndDisplayProjects() {
     try{
