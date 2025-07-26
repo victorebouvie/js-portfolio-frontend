@@ -1,0 +1,187 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.main-header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 70px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #007BFF;
+}
+
+.page-content {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+main section {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+main section h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+#presentation {
+    text-align: center;
+}
+
+#projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #fdfdfd;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.technologies span {
+    background-color: #e7e7e7;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    margin: 5px 5px 0 0;
+    display: inline-block;
+}
+
+.project-links a {
+    margin-top: 15px;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.project-links a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
+
+#hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+#hamburger-btn .line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    #hamburger-btn {
+        display: block;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #ffffff;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+        transition: right 0.4s ease-in-out;
+        z-index: 1000;
+    }
+
+    .main-nav.is-active {
+        right: 0;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        padding-top: 100px;
+        align-items: center;
+    }
+
+    .main-nav li {
+        margin: 15px 0;
+    }
+
+    .main-nav a {
+        font-size: 1.5rem;
+    }
+
+    #hamburger-btn.is-active .line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    #hamburger-btn.is-active .line:nth-child(2) {
+        opacity: 0;
+    }
+    #hamburger-btn.is-active .line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
