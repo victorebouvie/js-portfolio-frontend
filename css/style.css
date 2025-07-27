@@ -140,6 +140,79 @@ footer {
     transition: all 0.3s ease-in-out;
 }
 
+#theme-change {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#theme-change:hover {
+    transform: scale(1.2);
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #E0E0E0;
+}
+
+.dark-mode main section {
+    color: #252525;
+}
+
+.dark-mode .main-header {
+    background-color: #1E1E1E;
+    box-shadow: rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .logo a,
+.dark-mode .main-nav a {
+    color: #E0E0E0;
+}
+
+.dark-mode .main-nav a:hover {
+    color: #4dabf7;
+}
+
+.dark-mode #hamburger-btn .line {
+    background-color: #e0e0e0;
+}
+
+.dark-mode .project-card {
+    background-color: #252525;
+    border: 1px solid #333;
+    box-shadow: rgba(0, 0, 0, 0.2);
+    color: #E0E0E0;
+}
+
+.dark-mode .technologies span {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+.dark-mode .project-links a {
+    color: #4dabf7;
+}
+
+.dark-mode .project-links a:hover {
+    text-decoration-color: #4dabf7
+}
+
+.dark-mode footer {
+    color: #888;
+}
+
+@keyframes shake {
+  0%   { transform: scale(1.2) translateX(0); }
+  20%  { transform: scale(1.2) translateX(-4px); }
+  40%  { transform: scale(1.2) translateX(4px); }
+  60%  { transform: scale(1.2) translateX(-4px); }
+  80%  { transform: scale(1.2) translateX(4px); }
+  100% { transform: scale(1.2) translateX(0); }
+}
+
+.shake {
+  animation: shake 0.4s ease;
+}
+
 @media (max-width: 768px) {
     #hamburger-btn {
         display: block;
@@ -183,5 +256,10 @@ footer {
     }
     #hamburger-btn.is-active .line:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .dark-mode .main-nav {
+        background-color: #1E1E1E;
+        box-shadow: rgba(0, 0, 0, 0.5);
     }
 }
