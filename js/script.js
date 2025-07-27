@@ -61,7 +61,7 @@ themeSwitch.addEventListener('click', () => {
     if (body.classList.contains('dark-mode')) {
         localStorage.setItem('theme', 'dark')
     }else {
-        length.setItem('theme', 'light')
+        localStorage.setItem('theme', 'light')
     }
 
     updateThemeIcon()
