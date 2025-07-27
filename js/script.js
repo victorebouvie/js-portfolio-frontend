@@ -42,4 +42,43 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 })
 
+const themeSwitch = document.getElementById('theme-change')
+const body = document.body
+
+function updateThemeIcon() {
+    const isDarkTheme = body.classList.contains('dark-mode')
+
+    if (isDarkTheme) {
+        themeSwitch.textContent = '☀️'
+    } else {
+        themeSwitch.textContent = '🌙'
+    }
+}
+
+themeSwitch.addEventListener('click', () => {
+    body.classList.toggle('dark-mode')
+
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark')
+    }else {
+        length.setItem('theme', 'light')
+    }
+
+    updateThemeIcon()
+    themeSwitch.classList.add('shake')
+    setTimeout(() => {
+        themeSwitch.classList.remove('shake')
+    }, 400)
+})
+
+function loadTheme() {
+    const savedTheme = localStorage.getItem('theme')
+
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-mode')
+    }
+    updateThemeIcon()
+}
+
+loadTheme()
 fetchAndDisplayProjects()
