@@ -4,6 +4,7 @@ body {
     color: #333;
     line-height: 1.6;
     margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .main-header {
@@ -89,11 +90,12 @@ main section h2 {
     padding: 20px;
     width: 250px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .technologies span {
@@ -200,10 +202,23 @@ main section h2 {
     background-color: #0056b3;
 }
 
+#about-me-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 2;
+    min-width: 300px;
+}
+
 #form-status {
     text-align: center;
     margin-top: 15px;
     font-weight: bold;
+    min-height: 1.2em;
 }
 
 .social-links {
@@ -228,6 +243,30 @@ main section h2 {
     padding: 40px;
     font-size: 1.1em;
     color: #888;
+}
+
+#projects-container .status-error {
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 2rem 1rem;
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#form-status.status-success {
+  color: #155724;
+}
+
+#form-status.status-error {
+  color: #721c24;
+}
+
+#form-status.status-warning {
+  color: #856404;
 }
 
 body.dark-mode {
@@ -268,6 +307,10 @@ body.dark-mode {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
+.dark-mode .project-card:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
 .dark-mode .technologies span {
     background-color: #333;
     color: #e0e0e0;
@@ -302,6 +345,82 @@ body.dark-mode {
 
 .dark-mode #contact-form button:hover {
     background-color: #228be6;
+}
+
+.dark-mode #form-status.status-error {
+    color: #f8d7da;
+    background-color: #2c1a1f;
+    border-color: #582a2e;
+}
+
+.dark-mode #form-status.status-success {
+    color: #73d991;
+}
+
+.dark-mode #form-status-error {
+    color: #f68084;
+}
+
+.dark-mode #form-status.status-warning {
+    color: #f7b995;
+}
+
+#skills h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skill-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f7f6;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.skill-item:hover {
+    transform: scale(1.1);
+}
+
+.skill-item i {
+    font-size: 4em;
+    color: #333;
+}
+
+.dark-mode .skill-item {
+    background-color: #252525;
+}
+
+.dark-mode .skill-item i {
+    color: #e0e0e0;
+}
+
+.hidden-on-load {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.hidden-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.hidden-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @keyframes shake {
@@ -365,5 +484,9 @@ body.dark-mode {
     }
     #hamburger-btn.is-active .line:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+
+    #about-me-content {
+        flex-direction: column;
     }
 }

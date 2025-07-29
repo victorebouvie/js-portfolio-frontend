@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/10108/10108571.png">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <script src="https://kit.fontawesome.com/5fd784812d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -17,6 +19,7 @@
             <nav class="main-nav">
                 <ul>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#about-me">About me</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <a id="theme-change">🌙</a>
@@ -44,12 +47,46 @@
                     <p>Waking up the server, this may take a moment<span id="dots"></span></p>
                 </div>
 
-                <div id="projects-container"></div>
+                <div id="projects-container" class="hidden-on-load"></div>
+            </section>
+
+            <section id="skills">
+                <h2>My Tech Stack</h2>
+                <div class="skills-container hidden-on-scroll">
+                    <div class="skill-item">
+                        <i class="devicon-python-plain-wordmark colored"></i>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-lua-plain-wordmark colored"></i>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-javascript-plain colored"></i>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-html5-plain-wordmark colored"></i>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-css3-plain-wordmark colored"></i>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-flask-original-wordmark"></i>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-git-plain-wordmark colored"></i>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-github-original-wordmark"></i>
+                    </div>
+                </div>
             </section>
 
             <section id="about-me">
                 <h1>About Me</h1>
-                <p>Hi! I'm Victore Bouvie — a passionate 18-year-old full-stack developer with 4 years of hands-on coding experience. I started programming when I was 14, and since then, I've been constantly building, learning, and experimenting with modern technologies. I specialize in Lua (especially for Roblox development), Python, and JavaScript. Whether it's building web applications with REST APIs or designing modular game systems, I focus on writing clean, efficient, and scalable code. What drives me is the ability to solve real problems and bring ideas to life through code. I'm always open to freelance work, collaborations, and opportunities to grow alongside creative and driven people.</p>
+                <div id="about-me-content">
+                    <div id="about-text">
+                        <p>Hi! I'm Victore Bouvie — a passionate 18-year-old full-stack developer with 4 years of hands-on coding experience. I started programming when I was 14, and since then, I've been constantly building, learning, and experimenting with modern technologies. I specialize in Lua (especially for Roblox development), Python, and JavaScript. Whether it's building web applications with REST APIs or designing modular game systems, I focus on writing clean, efficient, and scalable code. What drives me is the ability to solve real problems and bring ideas to life through code. I'm always open to freelance work, collaborations, and opportunities to grow alongside creative and driven people.</p>
+                    </div>
+                </div>
             </section>
         </main>
     </div>
