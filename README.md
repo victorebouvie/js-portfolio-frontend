@@ -8,7 +8,7 @@ A modern, responsive, and single-page portfolio frontend built with vanilla Java
 
 ---
 
-[<!-- Megatrends -->](https://s1.ezgif.com/tmp/ezgif-1bf71e3133e4c3.gif)
+![Preview](https://s1.ezgif.com/tmp/ezgif-1bf71e3133e4c3.gif)
 
 ---
 
@@ -62,7 +62,7 @@ To run this project locally, follow the steps below.
 
 1.  Clone the repository to your machine:
     ```sh
-    git clone https://github.com/your-username/your-frontend-repo.git
+    git clone https://github.com/victorebouvie/js-portfolio-frontend
     ```
 2.  Navigate into the project directory:
     ```sh
