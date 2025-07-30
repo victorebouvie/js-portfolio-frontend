@@ -1,6 +1,8 @@
 # Dynamic Portfolio Frontend (JavaScript)
 
-![HTML5](https://img.shields.io/badge/Language-HTML5-orange?style=for-the-badge&logo=html5)![CSS3](https://img.shields.io/badge/Style-CSS3-blue?style=for-the-badge&logo=css3)![JavaScript](https://img.shields.io/badge/Language-JavaScript-yellow?style=for-the-badge&logo=javascript)
+![HTML5](https://img.shields.io/badge/Language-HTML5-orange?style=for-the-badge&logo=html5)
+![CSS3](https://img.shields.io/badge/Style-CSS3-blue?style=for-the-badge&logo=css3)
+![JavaScript](https://img.shields.io/badge/Language-JavaScript-yellow?style=for-the-badge&logo=javascript)
 
 A modern, responsive, and single-page portfolio frontend built with vanilla JavaScript to consume a RESTful API and dynamically display projects.
 
