@@ -8,7 +8,7 @@ A modern, responsive, and single-page portfolio frontend built with vanilla Java
 
 ---
 
-![Preview](https://s1.ezgif.com/tmp/ezgif-1bf71e3133e4c3.gif)
+![Preview]()
 
 ---
 
