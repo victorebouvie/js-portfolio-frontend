@@ -1,122 +1,141 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/10108/10108571.png">
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <script src="https://kit.fontawesome.com/5fd784812d.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/10108/10108571.png">
+        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+        <script src="https://kit.fontawesome.com/5fd784812d.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
 
-    <header class="main-header">
-        <div class="header-content">
-            <div class="logo">
-                <a href="#">Victore Bouvie</a>
+        <header class="main-header">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="#">Victore Bouvie</a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#about-me">About me</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <a id="theme-change">🌙</a>
+                    </ul>
+                </nav>
+                <button id="hamburger-btn">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
             </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#about-me">About me</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <a id="theme-change">🌙</a>
-                </ul>
-            </nav>
-            <button id="hamburger-btn">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
+        </header>
+
+        <div class="page-content">
+            <main>
+                <div id="presentation">
+                    <h1>Victore Bouvie</h1>
+                    <p>Full-Stack Dev | Specialized in Lua, JavaScript and Python</p>
+                </div>
+
+                <section id="projects">
+                    <h2>My Projects</h2>
+
+                    <div id="loader" style="display: none;">
+                        <p>Waking up the server, this may take a moment<span id="dots"></span></p>
+                    </div>
+
+                    <div id="projects-container" class="hidden-on-load"></div>
+                </section>
+
+                <section id="skills">
+                    <h2>My Tech Stack</h2>
+                    <div class="skills-container hidden-on-scroll">
+                        <div class="skill-item">
+                            <i class="devicon-python-plain-wordmark colored"></i>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-lua-plain-wordmark colored"></i>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-javascript-plain colored"></i>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-html5-plain-wordmark colored"></i>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-css3-plain-wordmark colored"></i>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-flask-original-wordmark"></i>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-git-plain-wordmark colored"></i>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-github-original-wordmark"></i>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="about-me">
+                    <h1>About Me</h1>
+                    <div id="about-me-content">
+                        <div id="about-text">
+                            <p>Hi! I'm Victore Bouvie — a passionate 18-year-old full-stack developer with 4 years of hands-on coding experience. I started programming when I was 14, and since then, I've been constantly building, learning, and experimenting with modern technologies. I specialize in Lua (especially for Roblox development), Python, and JavaScript. Whether it's building web applications with REST APIs or designing modular game systems, I focus on writing clean, efficient, and scalable code. What drives me is the ability to solve real problems and bring ideas to life through code. I'm always open to freelance work, collaborations, and opportunities to grow alongside creative and driven people.</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
         </div>
-    </header>
 
-    <div class="page-content">
-        <main>
-            <div id="presentation">
-                <h1>Victore Bouvie</h1>
-                <p>Full-Stack Dev | Specialized in Lua, JavaScript and Python</p>
+        <section id="contact">
+            <div class="contact-header">
+                <h2>Let's Talk?</h2>
+                <p>I'm open to new opportunities and collaborations. Feel free to contact me.</p>
             </div>
 
-            <section id="projects">
-                <h2>My Projects</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>You can find me here:</p>
 
-                <div id="loader" style="display: none;">
-                    <p>Waking up the server, this may take a moment<span id="dots"></span></p>
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>victore.bouvie.dev@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-brands fa-github"></i>
+                        <a href="https://github.com/victorebouvie/" target="_blank">github.com/victorebouvie</a>
+                    </div>
                 </div>
 
-                <div id="projects-container" class="hidden-on-load"></div>
-            </section>
-
-            <section id="skills">
-                <h2>My Tech Stack</h2>
-                <div class="skills-container hidden-on-scroll">
-                    <div class="skill-item">
-                        <i class="devicon-python-plain-wordmark colored"></i>
-                    </div>
-                    <div class="skill-item">
-                        <i class="devicon-lua-plain-wordmark colored"></i>
-                    </div>
-                    <div class="skill-item">
-                        <i class="devicon-javascript-plain colored"></i>
-                    </div>
-                    <div class="skill-item">
-                        <i class="devicon-html5-plain-wordmark colored"></i>
-                    </div>
-                    <div class="skill-item">
-                        <i class="devicon-css3-plain-wordmark colored"></i>
-                    </div>
-                    <div class="skill-item">
-                        <i class="devicon-flask-original-wordmark"></i>
-                    </div>
-                    <div class="skill-item">
-                        <i class="devicon-git-plain-wordmark colored"></i>
-                    </div>
-                    <div class="skill-item">
-                        <i class="devicon-github-original-wordmark"></i>
-                    </div>
+                <div class="contact-form-container">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" id="submit-btn">Send Message</button>
+                    </form>
+                    <div id="form-status"></div>
                 </div>
-            </section>
-
-            <section id="about-me">
-                <h1>About Me</h1>
-                <div id="about-me-content">
-                    <div id="about-text">
-                        <p>Hi! I'm Victore Bouvie — a passionate 18-year-old full-stack developer with 4 years of hands-on coding experience. I started programming when I was 14, and since then, I've been constantly building, learning, and experimenting with modern technologies. I specialize in Lua (especially for Roblox development), Python, and JavaScript. Whether it's building web applications with REST APIs or designing modular game systems, I focus on writing clean, efficient, and scalable code. What drives me is the ability to solve real problems and bring ideas to life through code. I'm always open to freelance work, collaborations, and opportunities to grow alongside creative and driven people.</p>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </div>
-
-    <footer id="contact">
-        <h2>Contact</h2>
-        <p>Have a question or want to work with me? Send me a message!</p>
-
-        <form id="contact-form">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
             </div>
-            <div class="form-group">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" id="submit-btn">Send message</button>
-        </form>
-        <div id="form-status"></div>
+        </section>
 
-        <div class="social-links">
-             <a href="https://github.com/victorebouvie/" target="_blank"><i class="fa-brands fa-github"></i></a>
-        </div>
-        <p class="copyright">© 2025 - Victore Bouvie</p>
-    </footer>
-    <script src="js/script.js" defer></script>
-</body>
+        <footer>
+            <p class="copyright">© 2025 - Victore Bouvie</p>
+        </footer>
+        <script src="js/script.js" defer></script>
+    </body>
 </html>

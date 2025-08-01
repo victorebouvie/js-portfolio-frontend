@@ -1,10 +1,23 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f4f7f6;
+    background-color: #f0f2f5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 200 200'%3E%3Cpolygon fill='%23FAFAFA' points='100 0 0 100 100 100 100 200 200 100 200 0'/%3E%3C/svg%3E");
     color: #333;
     line-height: 1.6;
     margin: 0;
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+footer .copyright {
+    font-size: 0.9em;
+    color: #777;
+    margin: 0;
 }
 
 .main-header {
@@ -72,8 +85,17 @@ main section h2 {
     font-size: 2em;
 }
 
+main section#skills {
+    background-color: #ffffff;
+}
+
 #presentation {
     text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+    border-radius: 8px;
+    color: #fff;
+    margin-bottom: 48px;
 }
 
 #projects-container {
@@ -90,12 +112,13 @@ main section h2 {
     padding: 20px;
     width: 250px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+    border-color: #007BFF;
 }
 
 .technologies span {
@@ -147,22 +170,74 @@ main section h2 {
 
 #contact {
     background-color: #ffffff;
-    padding: 40px;
+    padding: 40px 30px;
     border-radius: 8px;
-    margin-top: 40px;
 }
 
-#contact h2 {
+.contact-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#contact-header h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info, .contact-form-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.info-item i {
+    font-size: 1.2em;
+    color: #007BFF;
+    width: 20px;
     text-align: center;
 }
 
-#contact p {
-    text-align: center;
+.info-item span, .info-item a {
+    text-decoration: none;
+    color: #555;
+    font-size: 1.1em;
+}
+
+.info-item a:hover {
+    text-decoration: underline;
+}
+
+.social-links-contact a:hover {
+    transform: scale(1.2);
+    color: #007BFF;
 }
 
 #contact-form {
-    max-width: 600px;
-    margin: 20px auto;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -187,19 +262,28 @@ main section h2 {
     font-size: 1em;
 }
 
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
 #contact-form button {
     padding: 12px 20px;
-    background-color: #007BFF;
+    background: linear-gradient(90deg, #007BFF 0%, #0056b3 100%);
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
-    transition: background-color 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
 }
 
 #contact-form button:hover {
-    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
 }
 
 #about-me-content {
@@ -230,12 +314,6 @@ main section h2 {
     font-size: 2em;
     color: #333;
     margin: 0 10px;
-}
-.copyright {
-    font-size: 0.9em;
-    color: #777;
-    margin-top: 20px;
-    text-align: center;
 }
 
 #loader {
@@ -271,6 +349,8 @@ main section h2 {
 
 body.dark-mode {
     background-color: #121212;
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='10' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
     color: #E0E0E0;
 }
 
@@ -309,6 +389,7 @@ body.dark-mode {
 
 .dark-mode .project-card:hover {
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    border-color: #4dabf7;
 }
 
 .dark-mode .technologies span {
@@ -332,6 +413,18 @@ body.dark-mode {
     color: #888;
 }
 
+.dark-mode .info-item i {
+    color: #4dabf7;
+}
+
+.dark-mode .info-item span, .dark-mode .info-item a {
+    color: #e0e0e0;
+}
+
+.dark-mode .social-links-contact a {
+    color: #E0E0E0;
+}
+
 .dark-mode .form-group input,
 .dark-mode .form-group textarea {
     background-color: #252525;
@@ -339,8 +432,14 @@ body.dark-mode {
     color: #E0E0E0;
 }
 
+.dark-mode .form-group input:focus,
+.dark-mode .form-group textarea:focus {
+    border-color: #4dabf7;
+    box-shadow: 0 0 5px rgba(77, 171, 247, 0.3);
+}
+
 .dark-mode #contact-form button {
-    background-color: #4dabf7;
+    background: linear-gradient(90deg, #4dabf7 0%, #228be6 100%);
 }
 
 .dark-mode #contact-form button:hover {
@@ -421,6 +520,14 @@ body.dark-mode {
 .hidden-on-scroll.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.dark-mode #presentation {
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+}
+
+.dark-mode main section#skills {
+    background-color: #1e1e1e;
 }
 
 @keyframes shake {
